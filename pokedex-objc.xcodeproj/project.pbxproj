@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		44E57C1F1E3FACDC00B784CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E57C1E1E3FACDC00B784CE /* main.m */; };
 		44E57C221E3FACDC00B784CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E57C211E3FACDC00B784CE /* AppDelegate.m */; };
-		44E57C251E3FACDC00B784CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E57C241E3FACDC00B784CE /* ViewController.m */; };
 		44E57C281E3FACDC00B784CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E57C261E3FACDC00B784CE /* Main.storyboard */; };
 		44E57C2A1E3FACDC00B784CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44E57C291E3FACDC00B784CE /* Assets.xcassets */; };
 		44E57C2D1E3FACDC00B784CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E57C2B1E3FACDC00B784CE /* LaunchScreen.storyboard */; };
+		44E57C361E3FB3A700B784CE /* PokemonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E57C351E3FB3A700B784CE /* PokemonListViewController.m */; };
+		44E57C3A1E3FBAF400B784CE /* PokemonDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E57C391E3FBAF400B784CE /* PokemonDetails.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +21,15 @@
 		44E57C1E1E3FACDC00B784CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		44E57C201E3FACDC00B784CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		44E57C211E3FACDC00B784CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		44E57C231E3FACDC00B784CE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		44E57C241E3FACDC00B784CE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		44E57C271E3FACDC00B784CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44E57C291E3FACDC00B784CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44E57C2C1E3FACDC00B784CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44E57C2E1E3FACDC00B784CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44E57C341E3FB3A700B784CE /* PokemonListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokemonListViewController.h; sourceTree = "<group>"; };
+		44E57C351E3FB3A700B784CE /* PokemonListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokemonListViewController.m; sourceTree = "<group>"; };
+		44E57C381E3FBAF400B784CE /* PokemonDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokemonDetails.h; sourceTree = "<group>"; };
+		44E57C391E3FBAF400B784CE /* PokemonDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokemonDetails.m; sourceTree = "<group>"; };
+		44E57C3D1E3FBCFA00B784CE /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,7 @@
 			children = (
 				44E57C1C1E3FACDC00B784CE /* pokedex-objc */,
 				44E57C1B1E3FACDC00B784CE /* Products */,
+				F195B53D96B337E37745C020 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +63,11 @@
 		44E57C1C1E3FACDC00B784CE /* pokedex-objc */ = {
 			isa = PBXGroup;
 			children = (
+				44E57C3C1E3FBCE800B784CE /* Utils */,
+				44E57C3B1E3FBB9500B784CE /* Controller */,
+				44E57C371E3FBAE100B784CE /* Model */,
 				44E57C201E3FACDC00B784CE /* AppDelegate.h */,
 				44E57C211E3FACDC00B784CE /* AppDelegate.m */,
-				44E57C231E3FACDC00B784CE /* ViewController.h */,
-				44E57C241E3FACDC00B784CE /* ViewController.m */,
 				44E57C261E3FACDC00B784CE /* Main.storyboard */,
 				44E57C291E3FACDC00B784CE /* Assets.xcassets */,
 				44E57C2B1E3FACDC00B784CE /* LaunchScreen.storyboard */,
@@ -77,6 +83,39 @@
 				44E57C1E1E3FACDC00B784CE /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44E57C371E3FBAE100B784CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44E57C381E3FBAF400B784CE /* PokemonDetails.h */,
+				44E57C391E3FBAF400B784CE /* PokemonDetails.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		44E57C3B1E3FBB9500B784CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				44E57C341E3FB3A700B784CE /* PokemonListViewController.h */,
+				44E57C351E3FB3A700B784CE /* PokemonListViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		44E57C3C1E3FBCE800B784CE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				44E57C3D1E3FBCFA00B784CE /* Constants.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		F195B53D96B337E37745C020 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +190,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44E57C251E3FACDC00B784CE /* ViewController.m in Sources */,
 				44E57C221E3FACDC00B784CE /* AppDelegate.m in Sources */,
 				44E57C1F1E3FACDC00B784CE /* main.m in Sources */,
+				44E57C3A1E3FBAF400B784CE /* PokemonDetails.m in Sources */,
+				44E57C361E3FB3A700B784CE /* PokemonListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +352,7 @@
 				44E57C331E3FACDC00B784CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
