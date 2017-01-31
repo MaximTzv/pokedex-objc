@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,13 +21,71 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="SZe-fv-Gow">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="fH1-Cc-TMt"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hHE-rA-f4d">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yUk-eU-fL4">
+                                    <size key="itemSize" width="316" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="hph-5q-4JJ" customClass="PokemonCollectionViewCell">
+                                        <rect key="frame" x="2" y="0.0" width="316" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="316" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="217-kp-2Uv">
+                                                    <rect key="frame" x="8" y="8" width="300" height="34"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="217-kp-2Uv" firstAttribute="trailing" secondItem="hph-5q-4JJ" secondAttribute="trailingMargin" id="Wec-Di-YEf"/>
+                                            <constraint firstItem="217-kp-2Uv" firstAttribute="top" secondItem="hph-5q-4JJ" secondAttribute="topMargin" id="oNS-LF-ceG"/>
+                                            <constraint firstItem="217-kp-2Uv" firstAttribute="bottom" secondItem="hph-5q-4JJ" secondAttribute="bottomMargin" id="sMQ-gs-gYv"/>
+                                            <constraint firstItem="217-kp-2Uv" firstAttribute="leading" secondItem="hph-5q-4JJ" secondAttribute="leadingMargin" id="xpZ-1V-Sgz"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="pokemonNameLbl" destination="217-kp-2Uv" id="ydZ-bi-opJ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SZe-fv-Gow" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HTC-U7-u4c"/>
+                            <constraint firstItem="SZe-fv-Gow" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eKr-e2-6PY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hHE-rA-f4d" secondAttribute="bottom" id="l48-np-Zr8"/>
+                            <constraint firstItem="hHE-rA-f4d" firstAttribute="top" secondItem="SZe-fv-Gow" secondAttribute="bottom" id="qPR-4O-gk5"/>
+                            <constraint firstAttribute="trailing" secondItem="SZe-fv-Gow" secondAttribute="trailing" id="srJ-2A-QXA"/>
+                            <constraint firstAttribute="trailing" secondItem="hHE-rA-f4d" secondAttribute="trailing" id="xl2-9I-yf2"/>
+                            <constraint firstItem="hHE-rA-f4d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zUH-RN-kSZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ttK-nq-53y"/>
+                    <connections>
+                        <outlet property="collection" destination="hHE-rA-f4d" id="OOa-jp-P66"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958" y="99"/>
+            <point key="canvasLocation" x="947" y="91"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LE9-id-MgG">

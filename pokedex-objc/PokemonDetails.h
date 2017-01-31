@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^onComplete)(NSArray * __nullable dataDict, NSString * __nullable errorMessage);
+typedef void (^onComplete)(NSDictionary * __nullable dataDict, NSString * __nullable errorMessage);
 
 @interface PokemonDetails : NSObject
 

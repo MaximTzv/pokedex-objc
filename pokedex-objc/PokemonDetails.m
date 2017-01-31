@@ -20,7 +20,7 @@
         
         if (data != nil) {
             NSError *err;
-            NSArray *jsonPoke = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
+            NSDictionary *jsonPoke = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
             
             if (err == nil) {
                 completionHandler(jsonPoke, nil);
